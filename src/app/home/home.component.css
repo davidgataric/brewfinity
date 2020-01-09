@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'kg-defying';
+  src: url('../../assets/fonts/KGDefyingGravity.ttf');
+}
+
+.title {
+  text-align: center;
+  font-family: 'kg-defying';
+  font-size: 6.5em;
+}
+
+h1 {
+  margin-block-start: 50px;
+  margin-block-end: 10px;
+  background: -webkit-linear-gradient(orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-family: sans-serif;
+  margin-left: 10px;
+  margin-block-end: 10px;
+}
+
+p {
+  margin-block-start: 0px;
+  margin-block-end: 5px;
+  font-family: sans-serif;
+  margin-left: 15px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: darkred;
+}
+
+.beer-img {
+  width: 95px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+
+
+.product-card {
+  width: 250px;
+  border: 2px solid black;
+}
+
+.product-image {
+  width: 250px;
+}
+
+.product-card:hover {
+  background: -webkit-linear-gradient(orange, yellow);
+}

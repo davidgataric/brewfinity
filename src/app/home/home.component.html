@@ -1,0 +1,16 @@
+<div class="title">
+  <h1>Brewfinity</h1>
+</div>
+
+<mat-grid-list cols="4" rowHeight="500px">
+  <mat-grid-tile *ngFor="let product of products">
+    <div class="product-card">
+      <img [src]="product.image" alt="product" class="product-image">
+      <h3>{{product.name}}</h3>
+      <p>{{product.price}} CHF</p>
+      <p class="old-price">{{product.oldPrice}} CHF</p>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
