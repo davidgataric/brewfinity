@@ -24,6 +24,6 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <button mat-raised-button class="checkout-button">Checkout 0.00 CHF</button>
+  <button mat-raised-button class="checkout-button" [routerLink]="['/checkout']">Checkout 0.00 CHF</button>
 
 </div>

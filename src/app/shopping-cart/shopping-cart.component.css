@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'kg-defying';
+  src: url('../../assets/fonts/KGDefyingGravity.ttf');
+}
+
 .cart-table {
   margin-left: 250px;
   width: calc(100% - 500px);

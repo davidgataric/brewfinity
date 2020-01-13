@@ -1,1 +1,24 @@
+@font-face {
+  font-family: 'kg-defying';
+  src: url('../../assets/fonts/KGDefyingGravity.ttf');
+}
 
+.cart-button {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+}
+
+.form-wrapper {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  background-color: white;
+  width: calc(100% - 500px);
+  margin-left: 250px;
+}
+
+input, button {
+  width: 180px;
+  margin-left: 40px;
+  margin-top: 10px;
+}
