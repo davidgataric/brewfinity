@@ -1,0 +1,9 @@
+.cart-table {
+  margin-left: 250px;
+  width: calc(100% - 500px);
+}
+
+.checkout-button {
+  margin-top: 10px;
+  margin-left: 250px;
+}

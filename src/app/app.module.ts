@@ -6,10 +6,10 @@ import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {CheckoutComponent} from './checkout/checkout.component';
-import {MatButtonModule, MatGridListModule, MatIconModule} from '@angular/material';
+import {MatButtonModule, MatGridListModule, MatIconModule, MatTableModule} from '@angular/material';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {ShoppingCartComponent} from './shopping-cart/shopping-cart.component';
 
 const appRoutes: Routes = [
   {
@@ -23,6 +23,10 @@ const appRoutes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent,
+  },
+  {
+    path: 'shopping-cart',
+    component: ShoppingCartComponent,
   },
   {
     path: '',
@@ -43,6 +47,7 @@ const appRoutes: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatTableModule,
     MatIconModule,
     MatGridListModule,
     RouterModule.forRoot(appRoutes)

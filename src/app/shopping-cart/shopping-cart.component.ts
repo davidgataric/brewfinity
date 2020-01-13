@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor() { }
+  dataSource = [{produktname: '', einzelpreis: '', anzahl: ''}];
+  displayedColumns: string[] = ['Produktname', 'Einzelpreis', 'Anzahl'];
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
