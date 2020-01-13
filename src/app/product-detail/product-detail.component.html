@@ -1,0 +1,18 @@
+<div class="title">
+  <h1 class="title-text">Brewfinity</h1>
+  <button mat-raised-button class="cart-button"><i class="material-icons">
+    shopping_cart
+  </i>
+    CHF 0.00
+  </button>
+</div>
+
+<div class="product-wrapper">
+  <img [src]="beer.image" alt="beer-image">
+  <div class="beer-info">
+    <h1 class="beer-title">{{beer.name}}</h1><br>
+    <p>Preis: {{beer.price}} CHF</p><br>
+    <p>Alter Preis: {{beer.oldPrice}} CHF</p><br>
+    <button mat-raised-button class="add-cart-button">Zum Warenkorb hinzufügen</button>
+  </div>
+</div>

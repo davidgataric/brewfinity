@@ -6,12 +6,19 @@ import {AppComponent} from './app.component';
 import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {CheckoutComponent} from './checkout/checkout.component';
-import {MatGridListModule} from '@angular/material';
+import {MatButtonModule, MatGridListModule, MatIconModule} from '@angular/material';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+  },
+  {
+    path: 'detail',
+    component: ProductDetailComponent,
   },
   {
     path: 'checkout',
@@ -29,9 +36,14 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     CheckoutComponent,
+    ProductDetailComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
     MatGridListModule,
     RouterModule.forRoot(appRoutes)
   ],
