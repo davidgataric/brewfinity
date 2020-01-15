@@ -1,0 +1,11 @@
+<div class="title">
+    <h1 class="title-text">Brewfinity</h1>
+    <app-shopping-cart-button class="cart-button"></app-shopping-cart-button>
+</div>
+
+<div class="form-wrapper">
+    <input type="text" placeholder="Vorname" [(ngModel)]="firstName"><br>
+    <input type="text" placeholder="Nachname" [(ngModel)]="lastName"><br>
+    <input type="email" placeholder="Email-Adresse" [(ngModel)]="email"><br>
+    <button mat-raised-button (click)="confirmCheckout()">Einkauf Abschliessen</button>
+</div>

@@ -1,0 +1,22 @@
+<div class="title">
+    <h1 class="title-text">Brewfinity</h1>
+    <app-shopping-cart-button class="cart-button"></app-shopping-cart-button>
+</div>
+
+<div class="product-wrapper">
+    <mat-grid-list cols="4" rowHeight="500px">
+        <mat-grid-tile *ngFor="let product of products">
+            <div class="product-card" (click)="openDetails(product)">
+                <img [src]="product.image" alt="product" class="product-image">
+                <h3>{{product.name}}</h3>
+                <p>{{product.price.toFixed(2)}} CHF</p>
+                <p class="old-price">{{product.oldPrice.toFixed(2)}} CHF</p>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+<footer class="footer-bar">
+    <p class="footer-text">© 2020 BBZW, David Gataric</p>
+</footer>
+

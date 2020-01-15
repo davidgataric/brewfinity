@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'kg-defying';
+    src: url('../../assets/fonts/KGDefyingGravity.ttf');
+}
+
+.cart-table-wrapper {
+    margin-left: 250px;
+    width: calc(100% - 500px);
+    background-color: white;
+}
+
+.cart-table {
+    width: 100%;
+}
+
+.checkout-button {
+    margin-top: 10px;
+    margin-left: 250px;
+}
+
+td, th {
+    text-align: left;
+    font-family: sans-serif;
+}
+
+th {
+    background-color: orange;
+}
