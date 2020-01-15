@@ -1,4 +1,4 @@
-# Dorfladen BBZW
+# Brewfinity BBZW
 
 ### Ausführen
 1. Im Verzeichnis /brewfinity/backend ```npm install``` ausführen
