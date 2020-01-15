@@ -1,0 +1,28 @@
+<div class="title">
+    <h1 class="title-text">Brewfinity</h1>
+</div>
+
+<div class="cart-table-wrapper">
+    <table class="cart-table">
+        <tr>
+            <th>Produkt</th>
+            <th>Einzelpreis</th>
+            <th>Anzahl</th>
+            <th>Total</th>
+        </tr>
+        <tr *ngFor="let product of productsInCartDistinct">
+            <td>{{ product.name }}</td>
+            <td>{{ product.price.toFixed(2) }} CHF</td>
+            <td>
+                <button>-</button>
+                {{ product.amount }}
+                <button>+</button>
+            </td>
+            <td>{{ product.total.toFixed(2) }} CHF</td>
+        </tr>
+    </table>
+
+</div>
+
+<button mat-raised-button class="checkout-button" [routerLink]="['/checkout']">Checkout {{sumCHF.toFixed(2)}} CHF
+</button>
