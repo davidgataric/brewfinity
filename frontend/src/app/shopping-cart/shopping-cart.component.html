@@ -11,14 +11,14 @@
             <th>Total</th>
         </tr>
         <tr *ngFor="let product of productsInCartDistinct">
-            <td>{{ product.name }}</td>
-            <td>{{ product.price.toFixed(2) }} CHF</td>
+            <td>{{ product.product.name }}</td>
+            <td>{{ product.product.price.toFixed(2) }} CHF</td>
             <td>
-                <button>-</button>
+                <button (click)="removeFromCart(product.product)">-</button>
                 {{ product.amount }}
-                <button>+</button>
+                <button (click)="addToCart(product.product)">+</button>
             </td>
-            <td>{{ product.total.toFixed(2) }} CHF</td>
+            <td>{{ (product.product.price * product.amount).toFixed(2) }} CHF</td>
         </tr>
     </table>
 

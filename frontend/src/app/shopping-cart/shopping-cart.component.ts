@@ -40,8 +40,7 @@ export class ShoppingCartComponent implements OnInit {
             }
 
             const productInCart = {
-                name: currentProductName,
-                price: product.price,
+                product: product,
                 amount: count,
                 total: product.price * count
             };
@@ -76,5 +75,17 @@ export class ShoppingCartComponent implements OnInit {
 
     private count(key: string) {
         return this.productsInCartDistinct.reduce((a, b) => a + (b[key] || 0), 0);
+    }
+
+    async addToCart(product: Product) {
+        await this.productService.addProductToShoppingCart(product);
+        this.productsInCartDistinct = [];
+        await this.loadData();
+    }
+
+    async removeFromCart(product: Product) {
+        await this.productService.removeProductFromShoppingCart(product);
+        this.productsInCartDistinct = [];
+        await this.loadData();
     }
 }
