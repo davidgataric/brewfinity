@@ -58,8 +58,25 @@ app.post('/api/shopping-cart/empty', (req, res) => {
     res.sendStatus(200);
 });
 
+app.post('/api/shopping-cart/remove-item', (req, res) => {
+    removeItemFromCart(<Product>req.body, req);
+
+    res.sendStatus(200);
+});
+
 /* libs & assets */
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
 app.use('/spectre', express.static(path.join(__dirname, '..', '/node_modules/spectre.css/dist')));
 
 app.listen(8080, () => console.log('server is up and running'));
+
+function removeItemFromCart(product: Product, req) {
+    let index = 0;
+    for (let productInCart of req.session.cart) {
+        if (productInCart.name === product.name) {
+            req.session.cart.splice(index, 1);
+            break;
+        }
+        index++;
+    }
+}

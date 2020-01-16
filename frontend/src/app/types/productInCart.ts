@@ -1,6 +1,7 @@
+import {Product} from './product';
+
 export interface ProductInCart {
-  name: string;
-  price: number;
+  product: Product;
   amount: number;
   total: number;
 }
