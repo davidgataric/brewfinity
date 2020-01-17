@@ -53,16 +53,9 @@ app.post('/api/shopping-cart', (req, res) => {
 });
 
 app.post('/api/shopping-cart/empty', (req, res) => {
-    if (req.body.form.firstname !== '' &&
-        req.body.form.lastname !== '' &&
-        req.body.form.email !== '' &&
-        req.body.form.email.match('[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,4}')
-    ) {
-        req.session.cart = [];
-        res.sendStatus(200);
-    } else {
-        res.sendStatus(422);
-    }
+    req.session.cart = [];
+
+    res.sendStatus(200);
 });
 
 app.post('/api/shopping-cart/remove-item', (req, res) => {
