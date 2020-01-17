@@ -32,8 +32,13 @@ export class ProductService {
     this.shoppingCartState$.next();
   }
 
-  public async emptyShoppingCart() {
-    await this.http.post('http://localhost:8080/api/shopping-cart/empty', {}, {responseType: 'text'}).toPromise();
+  public async emptyShoppingCart(firstname: string, lastname: string, email: string) {
+    const form = {
+      firstname: firstname,
+      lastname: lastname,
+      email: email
+    };
+    await this.http.post('http://localhost:8080/api/shopping-cart/empty', form, {responseType: 'text'}).toPromise();
     this.shoppingCartState$.next();
   }
 }
