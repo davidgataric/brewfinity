@@ -26,6 +26,10 @@ export class CheckoutComponent implements OnInit {
             this._snackBar.open('Ihr Einkauf wurde getätigt!', '', {
                 duration: 2000,
             });
+        } else {
+            this._snackBar.open('Ihre Eingaben sind nicht gültig!', '', {
+                duration: 2000,
+            });
         }
     }
 
@@ -33,7 +37,8 @@ export class CheckoutComponent implements OnInit {
 
         if (this.firstName !== '' &&
             this.lastName !== '' &&
-            this.email !== ''
+            this.email !== '' &&
+            this.email.match(`.+\@.+\..+`)
         ) {
             return true;
         }

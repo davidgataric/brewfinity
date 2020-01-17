@@ -10,6 +10,7 @@ import {ProductService} from '../services/product.service';
 })
 export class HomeComponent implements OnInit {
 
+    public count = 0;
     public products: Array<Product> = new Array<Product>();
 
     constructor(private router: Router,
@@ -24,4 +25,22 @@ export class HomeComponent implements OnInit {
         this.router.navigateByUrl('detail', {state: {data: {beerProduct: beer}}});
     }
 
+    clickedSomething() {
+        if (this.count === 10) {
+            this.router.navigateByUrl('detail', {
+                state: {
+                    data: {
+                        beerProduct: {
+                            id: 1000,
+                            name: 'Serbischer Pass',
+                            image: '../../assets/img/secret.png',
+                            price: 3089.99,
+                            oldPrice: 9999.99
+                        }
+                    }
+                }
+            });
+        }
+        this.count++;
+    }
 }
