@@ -1,26 +1,27 @@
 <div class="title">
-    <h1 class="title-text">Brewfinity</h1>
+  <h1 class="title-text">Brewfinity</h1>
+  <app-shopping-cart-button class="cart-button"></app-shopping-cart-button>
 </div>
 
 <div class="cart-table-wrapper">
-    <table class="cart-table">
-        <tr>
-            <th>Produkt</th>
-            <th>Einzelpreis</th>
-            <th>Anzahl</th>
-            <th>Total</th>
-        </tr>
-        <tr *ngFor="let product of productsInCartDistinct">
-            <td>{{ product.product.name }}</td>
-            <td>{{ product.product.price.toFixed(2) }} CHF</td>
-            <td>
-                <button (click)="removeFromCart(product.product)">-</button>
-                {{ product.amount }}
-                <button (click)="addToCart(product.product)">+</button>
-            </td>
-            <td>{{ (product.product.price * product.amount).toFixed(2) }} CHF</td>
-        </tr>
-    </table>
+  <table class="cart-table">
+    <tr>
+      <th>Produkt</th>
+      <th>Einzelpreis</th>
+      <th>Anzahl</th>
+      <th>Total</th>
+    </tr>
+    <tr *ngFor="let product of productsInCartDistinct">
+      <td>{{ product.product.name }}</td>
+      <td>{{ product.product.price.toFixed(2) }} CHF</td>
+      <td>
+        <button (click)="removeFromCart(product.product)">-</button>
+        {{ product.amount }}
+        <button (click)="addToCart(product.product)">+</button>
+      </td>
+      <td>{{ (product.product.price * product.amount).toFixed(2) }} CHF</td>
+    </tr>
+  </table>
 
 </div>
 
