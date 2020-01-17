@@ -64,6 +64,13 @@ export class ShoppingCartComponent implements OnInit {
     private async loadData() {
         await this.productService.getProducts().then(async (allProducts) => {
             this.allProducts = allProducts;
+            this.allProducts.push({
+                id: 1000,
+                name: 'Serbischer Pass',
+                image: '../../assets/img/secret.png',
+                price: 3089.99,
+                oldPrice: 9999.99
+            });
             await this.productService.getShoppingCartValue().then(async (products) => {
                 this.shoppingCart = products;
                 this.distinctProducts();
